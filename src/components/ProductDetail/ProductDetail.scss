@@ -1,0 +1,111 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(16, 16, 16, 0.75);
+    z-index: 999;
+    
+    .product_detail{
+        position: relative;
+        background-color: #F2F2F2;
+        border-radius: 25px;
+        padding: 20px;
+        display: flex;
+        // align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        &>div{
+            flex-basis: 50%;
+            max-width: 50%;
+            &.left{
+                background-color: #fff;
+                border-radius: 15px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    max-width: 354px;
+                    margin: 0 auto;
+                }
+            }
+            &.right{
+                padding-left: 40px;
+            }
+        }
+        .content{
+            h1{
+                font-size: 2.375rem;
+                font-weight: 600;
+                color: #000;
+                max-width: calc(100% - 60px);
+            }
+            .cat{
+                color: #4D4848;
+            }
+            .rating{
+                margin-bottom: 15px;
+            }
+            .price{
+                color: #262626;
+                font-size: 1.625rem;
+                font-weight: 600;
+                margin-bottom: 0.7em;
+            }
+            .description{
+                color: #000;
+                margin-bottom: 60px;
+            }
+            .btn_group{
+                display: flex;
+                align-items: center;
+                margin: 0 -7px;
+                &>div{
+                    max-width: 50%;
+                    flex-basis: 50%;
+                    padding: 0 7px;
+                }
+                .add_to_cart_btn{
+                    height: 60px;
+                    width: 100%;
+                    border: 3px solid #DE8500;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.375rem;
+                    cursor: pointer;
+                    color: #DE8500;
+                    img{
+                        margin-right: 8px;
+                    }
+                }
+                .buy_now{
+                    width: 100%;
+                    height: 60px;
+                    font-size: 1.375rem;
+                    color: #fff;
+                    background-color: #06A40B;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+            }
+        }
+        .close_btn{
+            position: absolute;
+            right: 44px;
+            top: 30px;
+            cursor: pointer;
+        }
+    }
+}

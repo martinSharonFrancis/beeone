@@ -1,0 +1,17 @@
+.content_area{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    padding-bottom: 60px;
+    &>div{
+        padding: 0 5px;
+    }
+    &>.left{
+        max-width: 357px;
+        flex-basis: 357px;
+    }
+    &>.right{
+        max-width: calc(100% - 357px);
+        flex-basis: calc(100% - 357px);        
+    }
+}

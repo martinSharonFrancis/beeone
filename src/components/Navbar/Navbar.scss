@@ -1,0 +1,94 @@
+.navbar{
+    padding: 0 7.9375em;
+    background-color: #070141;
+    .nav_wrap{
+        padding: .875em 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left{
+            display: flex;
+            align-items: center;
+            .logo{
+                display: block;   
+                margin-right: 4.6875em;             
+            }
+            .search{
+                max-width: 521px;
+                height: 50px;
+                border-radius: 11px;
+                border: 2px solid #FFFFFF;
+                position: relative;
+                padding: .5625rem 0;
+                padding-left: 3.4375rem;                
+                img{
+                    position: absolute;
+                    left: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                input{
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;   
+                    background-color: transparent;     
+                    &::placeholder{
+                        color: #fff;
+                    }            
+                }
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            .links{
+                display: flex;
+                align-items: center;
+                &>li{
+                    margin-right: 1.875em;
+                    a{
+                        font-size: 1.25rem;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .notification{
+                margin-left: .9375em;
+                margin-right: 1.5625em;
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                .user_thub{
+                    width: 57px;
+                    height: 57px;
+                    border-radius: 50%;
+                    margin-right: .4375em;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .user_txt{
+                    color: #fff;
+                    .name{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+.product_feed{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7px;
+    &>div{
+        padding: 0 7px;
+        margin-bottom: 14px;
+        flex-basis: calc(100% / 4);
+        max-width: calc(100% / 4);
+    }
+}

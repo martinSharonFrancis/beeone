@@ -1,0 +1,107 @@
+.product_card {
+    border-radius: 16px;
+    border: 1px solid #D6D6D6;
+    position: relative;
+    .card_top {        
+        position: relative;
+
+        figure {
+            padding: 10px;
+            max-width: 236px;
+            min-height: 504px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add_to_fav {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            right: 30px;
+            top: 25px;
+            width: 31px;
+            height: 31px;
+            padding: 5px;
+            border-radius: 50%;
+            background: none;
+            -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 1);
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 1);
+            z-index: 1;
+        }
+        .hoverElement{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+                width: 46px;
+                height: 46px;
+                border: 1px solid #fff;
+                color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+    }
+    .card_btm{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px;
+
+        h2{
+            font-size: 1.3125rem;
+            font-weight: 600;
+            color: #000;
+        }
+        .catname{
+            font-size: .6875rem;
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            .rating{
+                margin-bottom: 4px;
+                max-width: 74px;
+            }
+            .price{
+                color: #262626;
+                font-weight: 600;
+                font-size: 1rem;
+                margin-bottom: 1em;
+            }
+        }
+        .add_to_cart_btn{
+            height: 25px;
+            background: transparent;
+            border: 1px solid #DE8500;
+            border-radius: 16px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img{
+                margin-right: 10px;
+            }
+            span{
+                font-weight: 700;
+                font-size: .625rem; 
+                color: #DE8500;               
+            }
+        }
+    }
+}
