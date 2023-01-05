@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    wishList: []
+    wishList: [],
+    wishListLength: 0
 }
 
 const wishSlice = createSlice({
@@ -11,9 +12,12 @@ const wishSlice = createSlice({
         addToWishList(state, action){
             if(state.wishList.find((product)=>product.id === action.payload.id)){
                 state.wishList = state.wishList.filter(product => action.payload.id !== product.id)
+
+                state.wishListLength = state.wishList.length
             }
             else{
                 state.wishList.push(action.payload)
+                state.wishListLength = state.wishList.length
             }
         }
     }

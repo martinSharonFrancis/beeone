@@ -8,6 +8,7 @@ import './ProductDetail.scss'
 import api from '../../api'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/cart/cartSlice'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function ProductDetail() {
     const navigate = useNavigate()
@@ -51,7 +52,7 @@ function ProductDetail() {
                                     dispatch(addToCart({product}))
                                     navigate('/cartpage')
                                 }}>
-                                    <img src={cart} alt="" />
+                                    <ShoppingCartOutlinedIcon fontSize='inherit' htmlColor='#DE8500' />
                                     <span>Add to cart</span>
                                 </button>
                             </div>
