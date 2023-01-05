@@ -8,11 +8,15 @@ import { fetchProducts } from '../../redux/product/productSlice'
 
 import './Home.scss'
 import { Outlet } from 'react-router-dom'
+import { useViewport } from '../../utils/useViewport'
 
 function Home() {
   const dispatch = useDispatch();
   const { products, loader } = useSelector((state) => state.product)
   const { categoryProducts, catLoader } = useSelector((state) => state.category)
+  const winWidth = useViewport();
+
+
   useEffect(() => {
     dispatch(fetchProducts());
   }, [])

@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .content_area{
     display: flex;
     flex-wrap: wrap;
@@ -9,9 +11,18 @@
     &>.left{
         max-width: 357px;
         flex-basis: 357px;
+
+        @include ipad(){
+            flex-basis: 100%;
+            max-width: 100%;
+        }
     }
     &>.right{
         max-width: calc(100% - 357px);
-        flex-basis: calc(100% - 357px);        
+        flex-basis: calc(100% - 357px);  
+        @include ipad(){
+            flex-basis: 100%;
+            max-width: 100%;
+        }      
     }
 }

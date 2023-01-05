@@ -10,7 +10,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addToWishList } from '../../redux/wish/wishSlice';
 import { addToCart } from '../../redux/cart/cartSlice';
 
-function ProductCard({ product }) {
+function ProductCard({ product, fromWishPage }) {
+    // console.log(product);
+    // console.log(fromWishPage);
     const { image, price, title, category, id } = product
     const [productHovered, setProductHovered] = useState(false)  
     const navigate = useNavigate()  
@@ -32,13 +34,14 @@ function ProductCard({ product }) {
                     </figure>
                     <button
                         className='add_to_fav'
+                        style={ fromWishPage ? {backgroundColor: '#E50404'} : {} }
                         onClick={(e)=>{
                             dispatch(addToWishList(product))
                             alert('Succesfully added to Wishlist')
                             navigate('/wishpage')
                         }}
                     >
-                        <FavoriteBorderIcon />
+                        <FavoriteBorderIcon htmlColor={fromWishPage ? '#fff' : ''} />
                     </button>
                     {
                         productHovered && (
@@ -67,6 +70,7 @@ function ProductCard({ product }) {
                             className="add_to_cart_btn"
                             onClick={()=>{
                                 dispatch(addToCart({product, numberOfProducts:1}))
+                                // alert("successfully added to cart")
                                 navigate('/cartpage')
                             }}
                         >

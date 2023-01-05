@@ -1,0 +1,28 @@
+.wish_page{
+    padding: 6vh 0 7vh;
+    .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #707070;
+        margin-bottom: 20px;
+
+        h1{
+            font-size: 2rem;
+            color: #000;
+            font-weight: 700;
+        }
+        .count{
+            font-size: .875rem;
+            color: #989191;
+            font-weight: 600;
+            .num{
+                font-weight: 600;
+                color: #000;
+                display: inline-block;
+                margin-right: 8px;
+            }
+        }
+    }
+}

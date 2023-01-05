@@ -1,3 +1,5 @@
+@import './variables';
+
 *{
     margin: 0;
     padding: 0;
@@ -18,8 +20,23 @@ body{
     font-size: 1.125rem;
     // line-height: 1.67;
     color: #4A4A4A;
+
+    @include mobile(){
+        font-size: .75rem;
+    }
 }
 .container{
     max-width: 1776px;
     margin: 0 auto;
+
+    @include hd(){
+        max-width: 1200px;
+    }
+    @include ipad(){
+        max-width: 690px;
+    }
+    @include mobile(){
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }

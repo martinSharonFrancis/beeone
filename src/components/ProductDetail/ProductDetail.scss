@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .modal{
     position: fixed;
     top: 0;
@@ -20,10 +22,21 @@
         flex-wrap: wrap;
         max-width: 1200px;
         margin: 0 auto;
+        @include ipad(){
+            max-width: 560px;            
+        }
+        @include mobile(){
+            max-width: 90%;
+        }
 
         &>div{
             flex-basis: 50%;
             max-width: 50%;
+
+            @include ipad(){
+                flex-basis: 100%;
+                max-width: 100%;
+            }
             &.left{
                 background-color: #fff;
                 border-radius: 15px;
@@ -31,13 +44,26 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include ipad(){
+                    padding: 30px 0;
+                }
                 img{
                     max-width: 354px;
                     margin: 0 auto;
+                    @include ipad(){
+                        max-width: 190px;
+                    }
+                    @include mobile(){
+                        max-width: 150px;
+                    }
                 }
             }
             &.right{
                 padding-left: 40px;
+                @include ipad(){
+                    padding-left: 0;
+                    padding-top: 15px;
+                }
             }
         }
         .content{
@@ -46,6 +72,10 @@
                 font-weight: 600;
                 color: #000;
                 max-width: calc(100% - 60px);
+                @include ipad(){
+                    font-size: 1.5rem;
+                    max-width: 100%;
+                }
             }
             .cat{
                 color: #4D4848;
@@ -86,6 +116,11 @@
                     img{
                         margin-right: 8px;
                     }
+                    @include mobile(){
+                        height: 32px;
+                        font-size: .6875rem;
+                        border: 1px solid #DE8500;
+                    }
                 }
                 .buy_now{
                     width: 100%;
@@ -98,6 +133,10 @@
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    @include mobile(){
+                        height: 32px;
+                        font-size: .6875rem;
+                    }
                 }
             }
         }
@@ -106,6 +145,7 @@
             right: 44px;
             top: 30px;
             cursor: pointer;
+            background-color: transparent;
         }
     }
 }
